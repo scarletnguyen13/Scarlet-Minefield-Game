@@ -59,31 +59,31 @@ public class ScarletMineField extends JApplet implements KeyListener, ActionList
         losePoint = 3;
         
         //import sound effects
-        good=getAudioClip(getCodeBase(),"good.wav");
-        move=getAudioClip(getCodeBase(),"move.wav");
-        bad=getAudioClip(getCodeBase(),"bad.wav");
-        win=getAudioClip(getCodeBase(),"applause.wav");
-        lose=getAudioClip(getCodeBase(),"lose.wav");
+        good=getAudioClip(getCodeBase(),"sounds/good.wav");
+        move=getAudioClip(getCodeBase(),"sounds/move.wav");
+        bad=getAudioClip(getCodeBase(),"sounds/bad.wav");
+        win=getAudioClip(getCodeBase(),"sounds/applause.wav");
+        lose=getAudioClip(getCodeBase(),"sounds/lose.wav");
         
         //import images
-        ball = getImage(getCodeBase(),"ball.jpg");
+        ball = getImage(getCodeBase(),"images/ball.jpg");
 
-        goodPic =  getImage(getCodeBase(),"heart.jpg");
-        badPic = getImage(getCodeBase(),"poop.jpg");
-        neutralPic = getImage(getCodeBase(),"sleepy.jpg");
+        goodPic =  getImage(getCodeBase(),"images/heart.jpg");
+        badPic = getImage(getCodeBase(),"images/poop.jpg");
+        neutralPic = getImage(getCodeBase(),"images/sleepy.jpg");
 
-        goodPicCurrent = getImage(getCodeBase(),"heartCurrent.jpg");
-        badPicCurrent= getImage(getCodeBase(),"poopCurrent.jpg");
-        neutralPicCurrent = getImage(getCodeBase(),"sleepyCurrent.jpg");
+        goodPicCurrent = getImage(getCodeBase(),"images/heartCurrent.jpg");
+        badPicCurrent= getImage(getCodeBase(),"images/poopCurrent.jpg");
+        neutralPicCurrent = getImage(getCodeBase(),"images/sleepyCurrent.jpg");
         
-        lives = getImage(getCodeBase(),"lives - Copy.jpg");
-        livesLost = getImage(getCodeBase(),"lives - Copy - Copy.jpg");
+        lives = getImage(getCodeBase(),"images/lives - Copy.jpg");
+        livesLost = getImage(getCodeBase(),"images/lives - Copy - Copy.jpg");
 
-        lightbulb = getImage(getCodeBase(),"lightbulb.jpg");
-        lightbulbBright = getImage(getCodeBase(),"lightbulbBright.jpg");
+        lightbulb = getImage(getCodeBase(),"images/lightbulb.jpg");
+        lightbulbBright = getImage(getCodeBase(),"images/lightbulbBright.jpg");
 
-        arrows = getImage(getCodeBase(),"keyboard-arrows.jpg");
-        spacebar = getImage(getCodeBase(),"spacebar.jpg");
+        arrows = getImage(getCodeBase(),"images/keyboard-arrows.jpg");
+        spacebar = getImage(getCodeBase(),"images/spacebar.jpg");
         
         //import and setup factors for buttons
         start = new Button("START");
@@ -122,7 +122,7 @@ public class ScarletMineField extends JApplet implements KeyListener, ActionList
         field=new Image[10][10];
         for (int a = 0; a <10;a++) {
             for (int b = 0; b<10; b++) {
-                String fileLocation="["+a+"]["+b+"].jpeg";
+                String fileLocation="images/["+a+"]["+b+"].jpeg";
                 field[a][b]=getImage(getCodeBase(),fileLocation);
             }
         }
@@ -321,7 +321,7 @@ public class ScarletMineField extends JApplet implements KeyListener, ActionList
                             field[a][b]=uncovered[a][b];
                         }
                         else {
-                            String fileLocation="["+a+"]["+b+"].jpeg";
+                            String fileLocation="images/["+a+"]["+b+"].jpeg";
                             field[a][b]=getImage(getCodeBase(),fileLocation);
                         }
                         
@@ -381,7 +381,7 @@ public class ScarletMineField extends JApplet implements KeyListener, ActionList
                             field[a][b]=uncovered[a][b];
                         }
                         else {
-                            String fileLocation="["+a+"]["+b+"].jpeg";
+                            String fileLocation="images/["+a+"]["+b+"].jpeg";
                             field[a][b]=getImage(getCodeBase(),fileLocation);
                         }
                         
@@ -441,7 +441,7 @@ public class ScarletMineField extends JApplet implements KeyListener, ActionList
                             field[a][b]=uncovered[a][b];
                         }
                         else {
-                            String fileLocation="["+a+"]["+b+"].jpeg";
+                            String fileLocation="images/["+a+"]["+b+"].jpeg";
                             field[a][b]=getImage(getCodeBase(),fileLocation);
                         }
                         
@@ -501,7 +501,7 @@ public class ScarletMineField extends JApplet implements KeyListener, ActionList
                             field[a][b]=uncovered[a][b];
                         }
                         else {
-                            String fileLocation="["+a+"]["+b+"].jpeg";
+                            String fileLocation="images/["+a+"]["+b+"].jpeg";
                             field[a][b]=getImage(getCodeBase(),fileLocation);
                         }
                         
@@ -529,7 +529,7 @@ public class ScarletMineField extends JApplet implements KeyListener, ActionList
                     if (space[a][b]==true)
                     {
                         //import field images so their order doesn't mess up when we press spacebar
-                        String fileLocation="["+a+"]["+b+"].jpeg";
+                        String fileLocation="images/["+a+"]["+b+"].jpeg";
                         field[a][b]=getImage(getCodeBase(),fileLocation);
                         //field tile is replaced by uncovered field tile
                         field[a][b]=uncovered[a][b];
@@ -662,7 +662,7 @@ public class ScarletMineField extends JApplet implements KeyListener, ActionList
             //repaint everything to be the field
             for (int a = 0; a < 10;a++) {
                 for (int b = 0; b<10; b++) {
-                    String fileLocation="["+a+"]["+b+"].jpeg";
+                    String fileLocation="images/["+a+"]["+b+"].jpeg";
                     field[a][b]=getImage(getCodeBase(),fileLocation);
                 }
             }
